@@ -1,2 +1,6 @@
 # lab-asip.github.io
-The front page for ASIP lab
+
+> TODO
+
+This the html source code for ASIP lab's websites, published automatically by
+[Github Actions](https://www.getzola.org/documentation/deployment/github-pages/)
