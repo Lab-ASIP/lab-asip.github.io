@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yuanyuan Huang |  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    <style>
+  :root {
+    /* Primary theme color */
+    --primary-color: #b6bfe2;
+    /* Primary theme text color */
+    --primary-text-color: #3760bf;
+    --primary-text-color-over: #000;
+    /* Primary theme link color */
+    /* --primary-link-color: #8990b3; */
+    /* Secondary color: the background body color */
+    --secondary-color: #e1e2e7;
+    --secondary-text-color: #3760bf;
+    /* Highlight text color of table of content */
+    --toc-highlight-text-color: #3760bf;
+    --toc-background-color: #e9e9ec;
+    --code-color: #587539;
+    --code-background-color: #e9e9ec;
+    --shadow-color: #8990b3;
+    /* Font used for headers (h1 & h2) */
+    --header-font-family: "Google Sans", sans-serif;
+    /* Font used for text */
+    --text-font-family: "Google Sans", sans-serif;
+  }
+</style>
+
+    
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css2?family=Product+Sans&amp;family=Google+Sans+Display:ital@0;1&amp;family=Google+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;family=Google+Sans+Text:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
+
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="https://asip-lab.org/juice.css">
+    
+    <link rel="stylesheet" href="https://asip-lab.org/carbon.css">
+    
+</head>
+
+<body>
+    
+<header class="box-shadow">
+    
+
+<a href="https://asip-lab.org/">
+    <div class="logo">
+        <img src="https://asip-lab.org/meloncat.png" alt="logo">
+        
+    </div>
+</a>
+
+<nav>
+    
+    
+        
+        <a class="nav-item subtitle-text" href="/personnel">Members</a>
+        
+        <a class="nav-item subtitle-text" href="/news">News</a>
+        
+        <a class="nav-item subtitle-text" href="/research">Research</a>
+        
+        <a class="nav-item subtitle-text" href="/resource">Resource</a>
+        
+        <a class="nav-item subtitle-text" href="http://index.cslt.org/mediawiki/index.php/%E9%A6%96%E9%A1%B5">Wiki</a>
+        
+        <a class="nav-item subtitle-text" href="https://github.com/Lab-ASIP">Github</a>
+        
+    
+</nav>
+
+</header>
+
+
+    <main>
+        
+        
+        
+        
+        
+        <div class="toc">
+            <div class="toc-sticky">
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://asip-lab.org/personnel/yuanyuan/#sdaf">sdaf</a>
+                </div>
+                
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://asip-lab.org/personnel/yuanyuan/#john-doe"><small>&ensp;John Doe</small></a>
+                </div>
+                
+                
+                
+                
+            </div>
+        </div>
+        
+        
+
+        <div class="content text">
+            
+<div class="heading-text">ASIP website maintainer, and aspiring rust learner</div>
+<h2 id="sdaf">sdaf</h2>
+<p>I'm yuanyuan huang.</p>
+<p>When designing a website to showcase the personnel in your lab, you can include the following aspects to briefly describe each lab member:</p>
+<ol>
+<li><strong>Name</strong>: Full name of the lab member.</li>
+<li><strong>Position/Role</strong>: Their specific role in the lab (e.g., Principal Investigator, Postdoctoral Researcher, Graduate Student).</li>
+<li><strong>Photo</strong>: A professional headshot or casual photo.</li>
+<li><strong>Research Interests</strong>: A brief summary of their research interests and areas of expertise.</li>
+<li><strong>Education</strong>: Highest degree earned and the institution from which it was obtained.</li>
+<li><strong>Current Projects</strong>: A short description of the research projects they are currently working on.</li>
+<li><strong>Publications</strong>: Key publications or a link to their full publication list (e.g., on Google Scholar or ResearchGate).</li>
+<li><strong>Contact Information</strong>: Email address or other preferred contact methods.</li>
+<li><strong>Personal Website/LinkedIn Profile</strong>: Links to their personal academic website, LinkedIn profile, or other relevant online presence.</li>
+<li><strong>Bio</strong>: A short biography that may include their professional background, achievements, and other relevant information.</li>
+</ol>
+<p>Here's an example template for a lab member's profile:</p>
+<h3 id="john-doe">John Doe</h3>
+<p><strong>Position</strong>: Graduate Student</p>
+<p><strong>Photo</strong>: [Insert Photo]</p>
+<p><strong>Research Interests</strong>: Bioinformatics, computational biology, and machine learning applications in genomics.</p>
+<p><strong>Education</strong>: M.Sc. in Bioinformatics, University of Somewhere</p>
+<p><strong>Current Projects</strong>: Investigating the genetic basis of disease resistance in plants using machine learning techniques.</p>
+<p><strong>Publications</strong>: [Link to Publications]</p>
+<p><strong>Contact Information</strong>: john.doe@example.com</p>
+<p><strong>Personal Website</strong>: [John's Personal Website]</p>
+<p><strong>Bio</strong>: John has a strong background in computational biology and has contributed to several high-impact research projects. He is passionate about using technology to solve complex biological problems.</p>
+<p>Including these elements will help visitors to your website quickly understand who each lab member is, what they do, and how they can be contacted.</p>
+
+
+        </div>
+
+        
+
+    </main>
+
+    
+
+</body>
+<script>
+    const scrollHandler = entries => {
+        // Find the first entry which intersecting and ratio > 0.9 to highlight.
+        let entry = entries.find(entry => {
+            return entry.isIntersecting && entry.intersectionRatio > 0.9;
+        });
+        if (!entry) return;
+
+        document.querySelectorAll(".toc a").forEach((item) => {
+            item.classList.remove("active");
+        });
+
+        // let url = new URL(`#${entry.target.id}`);
+        let link = document.querySelector(`.toc a[href$="${decodeURIComponent(`#${entry.target.id}`)}"]`)
+        if (link) {
+            link.classList.add("active");
+            link.scrollIntoView({ behavior: "auto", block: "nearest" });
+        }
+    };
+    // Set -100px root margin to improve highlight experience.
+    const observer = new IntersectionObserver(scrollHandler, { threshold: 1 });
+    let items = document.querySelectorAll('h1,h2,h3,h4,h5,h6');
+    items.forEach(item => observer.observe(item));
+</script>
+
+</html>

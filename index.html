@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    <style>
+  :root {
+    /* Primary theme color */
+    --primary-color: #b6bfe2;
+    /* Primary theme text color */
+    --primary-text-color: #3760bf;
+    --primary-text-color-over: #000;
+    /* Primary theme link color */
+    /* --primary-link-color: #8990b3; */
+    /* Secondary color: the background body color */
+    --secondary-color: #e1e2e7;
+    --secondary-text-color: #3760bf;
+    /* Highlight text color of table of content */
+    --toc-highlight-text-color: #3760bf;
+    --toc-background-color: #e9e9ec;
+    --code-color: #587539;
+    --code-background-color: #e9e9ec;
+    --shadow-color: #8990b3;
+    /* Font used for headers (h1 & h2) */
+    --header-font-family: "Google Sans", sans-serif;
+    /* Font used for text */
+    --text-font-family: "Google Sans", sans-serif;
+  }
+</style>
+
+    
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css2?family=Product+Sans&amp;family=Google+Sans+Display:ital@0;1&amp;family=Google+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;family=Google+Sans+Text:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
+
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="https://asip-lab.org/juice.css">
+    
+    <link rel="stylesheet" href="https://asip-lab.org/carbon.css">
+    
+</head>
+
+<body>
+    
+
+    <header class="pos-absolute" style="background-color: transparent">
+        
+
+<a href="https://asip-lab.org/">
+    <div class="logo">
+        <img src="https://asip-lab.org/meloncat.png" alt="logo">
+        
+    </div>
+</a>
+
+<nav>
+    
+    
+        
+        <a class="nav-item subtitle-text" href="/personnel">Members</a>
+        
+        <a class="nav-item subtitle-text" href="/news">News</a>
+        
+        <a class="nav-item subtitle-text" href="/research">Research</a>
+        
+        <a class="nav-item subtitle-text" href="/resource">Resource</a>
+        
+        <a class="nav-item subtitle-text" href="http://index.cslt.org/mediawiki/index.php/%E9%A6%96%E9%A1%B5">Wiki</a>
+        
+        <a class="nav-item subtitle-text" href="https://github.com/Lab-ASIP">Github</a>
+        
+    
+</nav>
+
+    </header>
+
+    <div class="hero">
+        
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<section class="text-center">
+	<h1 class="heading-text" style="font-size: 50px">
+		Welcome to ASIP lab!
+	</h1>
+	<h3 class="title-text">
+		<i>Audio Speech Information Processing</i> lab,<br> is a research lab focusing on advancing technologies related to audio and speech information processing.
+	</h3>
+</section>
+<img class="hero-image" style="width: 50%" src="https://asip-lab.org/meloncat.png">
+
+<div class="explore-more text" onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})">
+	More ⇩
+</div>
+<style>
+.hero section {
+  padding: 0 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .hero section {
+    padding: 0 2rem;
+  }
+
+  .hero-image {
+    display: none;
+  }
+}
+</style>
+
+    </div>
+
+    
+
+    <main>
+        
+        
+        
+        
+        
+        <div class="toc">
+            <div class="toc-sticky">
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://asip-lab.org/#about-us">About US</a>
+                </div>
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://asip-lab.org/#research-areas">Research Areas</a>
+                </div>
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://asip-lab.org/#publications">Publications</a>
+                </div>
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://asip-lab.org/#major-awards">Major Awards</a>
+                </div>
+                
+                
+            </div>
+        </div>
+        
+        
+
+        <div class="content text">
+            
+            <div id="features" class="heading-text">Overview</div>
+            <h2 id="about-us">About US</h2>
+<h2 id="research-areas">Research Areas</h2>
+<h2 id="publications">Publications</h2>
+<h2 id="major-awards">Major Awards</h2>
+
+            
+        </div>
+
+        
+
+    </main>
+
+    
+
+</body>
+<script>
+    const scrollHandler = entries => {
+        // Find the first entry which intersecting and ratio > 0.9 to highlight.
+        let entry = entries.find(entry => {
+            return entry.isIntersecting && entry.intersectionRatio > 0.9;
+        });
+        if (!entry) return;
+
+        document.querySelectorAll(".toc a").forEach((item) => {
+            item.classList.remove("active");
+        });
+
+        // let url = new URL(`#${entry.target.id}`);
+        let link = document.querySelector(`.toc a[href$="${decodeURIComponent(`#${entry.target.id}`)}"]`)
+        if (link) {
+            link.classList.add("active");
+            link.scrollIntoView({ behavior: "auto", block: "nearest" });
+        }
+    };
+    // Set -100px root margin to improve highlight experience.
+    const observer = new IntersectionObserver(scrollHandler, { threshold: 1 });
+    let items = document.querySelectorAll('h1,h2,h3,h4,h5,h6');
+    items.forEach(item => observer.observe(item));
+</script>
+
+</html>
